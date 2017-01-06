@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headerHeight"
+        android:background="@color/barcolor">
+
+        <TextView
+            style="@style/bar_style"
+            android:text="城市选择" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="quexiao"
+            android:layout_margin="5dp"
+            android:text="取消" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/suosu"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="ivclick"
+            android:background="@null"
+            android:src="@mipmap/btn_search_img_pressed"/>
+
+        <EditText
+            android:id="@+id/ed_cityChoice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:lines="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="中文/拼音/首字母"
+            android:textColorHint="#aaa" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/cityChoiceLv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.qf.projectone.widget.LetterView
+            android:id="@+id/letterView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp" />
+
+        <com.qf.projectone.widget.ShowText
+            android:id="@+id/showText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

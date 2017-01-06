@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/img_more"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/tv_more"
+        android:layout_alignLeft="@+id/tv_more"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+</RelativeLayout>
